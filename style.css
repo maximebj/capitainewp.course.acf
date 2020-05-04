@@ -1,0 +1,161 @@
+/*
+Theme Name: Capitaine ACF
+Theme URI: https://capitainewp.io
+Author: Maxime BERNARD-JACQUET
+Author URI: https://dysign.fr
+Description: Les exemples de champs ACF et leur code PHP
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+
+/* BASICS */ 
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Sarabun', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: #6B747A;
+  line-height: 1.6;
+}
+
+a {
+  color: #48ADD8;
+}
+
+/* WP OVERRIDES */
+
+.post-categories {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.post-categories li { 
+  display: inline;
+}
+
+/* SITE HEADER */
+
+.site__header {
+  text-align: center;
+  background: #232634;
+  padding: 40px 0;
+}
+
+.site__header img {
+  height: 120px;
+}
+
+.site__header__menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.site__header__menu ul {
+  display: none;
+}
+
+.site__header__menu li {
+  display: inline-block;
+}
+
+.site__header__menu li + li:before {
+  content: ' • ';
+  color: white;
+  margin: 10px;
+} 
+
+.site__header__menu a {
+  color: white;
+  text-decoration: none;
+  line-height: 2em;
+}
+
+/* BLOG + SIDEBAR */
+
+.site__blog {
+  display: flex;
+}
+
+.site__blog main {
+  flex: 2;
+}
+
+.site__blog aside {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.site__sidebar__widget {
+  margin-bottom: 30px;
+  font-size: .9em;
+}
+
+.site__sidebar__widget__title {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* SITE TITLE */
+
+.site__heading {
+  font-size: 1.6em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #232634;
+}
+
+.site__heading:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 0;
+  border-bottom: 2px solid #EBEBEB;
+  margin: 30px auto;
+}
+
+/* SITE CONTENT */
+
+.site__content {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 3em 20px;
+}
+
+.site__content h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #232634;
+  margin: 2em 0;
+}
+
+/* FOOTER */
+
+.site__footer {
+  text-align: center;
+  background: #232634;
+  color: white;
+  font-size: .8em;
+  padding: 1em 0;
+}

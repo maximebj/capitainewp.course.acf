@@ -17,5 +17,9 @@
       $lightbox.fadeOut();
     });
 
+
+    // Flexslider 
+    $('.flexslider').flexslider();
+
   });
 })(jQuery);

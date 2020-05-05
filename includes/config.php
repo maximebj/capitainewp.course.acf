@@ -6,6 +6,9 @@ add_theme_support( 'post-thumbnails' );
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
+// Ajouter une taille d'image
+add_image_size( 'gallery-thumb', 1200, 800, true );
+
 // Menus
 register_nav_menus( array(
   'main' => __( 'Main menu', 'capitaine' ),

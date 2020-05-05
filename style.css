@@ -159,3 +159,35 @@ a {
   font-size: .8em;
   padding: 1em 0;
 }
+
+
+/* ACF GALLERY */ 
+
+.acf-gallery {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.acf-gallery li {
+  flex: 25%;
+  margin: 10px;
+}
+
+/* Lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.7);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

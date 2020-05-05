@@ -1,24 +1,20 @@
 (function ($) {
   $(document).ready(function () {
     
-    // Load comments
-    $('.comments-load-button').click(function () {
-      
-      var post_id = $('.comments').attr('data-post-id');
-      
-      $.ajax({
-        url: ajaxurl,
-        type: "POST",
-        data: {
-          'action': 'load_comments',
-          'post_id': post_id
-        }
-      }).done(function (response) {
-        
-        $('.comments').html(response); // Afficher le HTML
-        $('.comments-load-button').hide(); // Cacher le bouton
-      });
+    var $lightbox = $('.lightbox');
 
+    // Ouvrir la lightbox
+    $('.acf-gallery a').click(function (e) {
+      e.preventDefault();
+      var url = $(this).attr('href');
+
+      $lightbox.css('background-image', 'url(' + url + ')');
+      $lightbox.fadeIn();
+    });
+
+    // Fermer la lightbox
+    $lightbox.click(function () {
+      $lightbox.fadeOut();
     });
 
   });

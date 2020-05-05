@@ -41,8 +41,10 @@
       <ul class="slides">
         <?php foreach( $images as $image ): ?>
           <li>
-            <img src="<?php echo esc_url( $image['sizes']['gallery-thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-            <p><?php echo esc_html( $image['caption'] ); ?></p>
+            <a href="<?php echo wp_get_attachment_url( $image['id'] ); ?>">
+              <img src="<?php echo esc_url( $image['sizes']['gallery-thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+              <p><?php echo esc_html( $image['caption'] ); ?></p>
+            </a>
           </li>
         <?php endforeach; ?>
       </ul>

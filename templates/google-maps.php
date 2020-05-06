@@ -11,6 +11,21 @@
 
   <div class="wp-content"><?php the_content(); ?></div>
 
+  <?php 
+    $place = get_field( 'place' );
+    if( $place ): 
+      $lat = esc_attr( $place['lat'] );
+      $lng = esc_attr( $place['lng'] );
+      $zoom = esc_attr( $place['zoom'] );
+  ?>
+    <div class="acf-map" data-zoom="<?php echo $zoom; ?>">
+      <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>">
+        <h3><?php the_field( 'title' ); ?></h3>
+        <?php the_field( 'description' ); ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
 
 <?php 
   endwhile; endif;

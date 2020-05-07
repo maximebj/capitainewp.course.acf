@@ -163,5 +163,52 @@ a {
 }
 
 .acf-map img {
-   max-width: inherit !important; /* Corrige un souci de conflit avec le thème */
+  max-width: inherit !important; /* Corrige un souci de conflit avec le thème */
+}
+
+
+/* Répéteur */
+
+.team {
+  border: 1px solid #ddd;
+  margin: 0 15%;
+}
+
+.team__member {
+  display: flex;
+}
+
+.team__member + .team__member {
+  border-top: 1px solid #ddd;
+}
+
+.team__member__pic {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.team__member__data {
+  flex: 4;
+  padding: 20px;
+  font-size: .8em;
+}
+
+.team__member__data p {
+  margin: 0;
+}
+
+.team__member__pic img {
+  display: block;
+  border-radius: 50%;
+}
+
+.team__member__name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #444;
+}
+
+.team__member__occupation {
+  color: #777;
 }

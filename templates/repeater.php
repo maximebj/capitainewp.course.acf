@@ -4,7 +4,7 @@
 */
 
   get_header();
-  if( have_posts() ) : while( have_posts() ) : the_post();
+  if( have_posts() ): while( have_posts() ): the_post();
 ?>
 
   <h1 class="site__heading"><?php the_title(); ?></h1>
@@ -13,7 +13,7 @@
 
   <?php if( have_rows( 'team' ) ): ?>
     <div class="team">
-      <?php while ( have_rows( 'team' ) ) : the_row(); ?>
+      <?php while ( have_rows( 'team' ) ): the_row(); ?>
         <div class="team__member">
           <div class="team__member__pic">
             <?php 
@@ -28,9 +28,9 @@
             <p class="team__member__mail">
               <a href="mailto:<?php the_sub_field( 'mail' ); ?>"><?php the_sub_field( 'mail' ); ?></a></p>
           </div>
-        </div>
+        </div> <!-- team__member -->
       <?php endwhile; ?>
-    </div>
+    </div> <!-- team -->
   <?php endif; ?>
 
 

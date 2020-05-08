@@ -212,3 +212,92 @@ a {
 .team__member__occupation {
   color: #777;
 }
+
+
+/* Flexible */
+
+.menus {
+  margin: 0 auto;
+  max-width: 680px;
+  border: 2px solid #EBEBEB;
+  border-radius: 10px;
+  padding: 20px 50px;
+}
+
+.menus__section {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.menus__section h2 {
+  margin: 0;
+}
+
+.menus__section p {
+  margin-top: 0.5em;
+  font-size: .9em;
+  font-style: italic;
+  color: #999;
+}
+
+.menus__dishes {
+  margin: 2em 0;
+  border: 1px solid #EBEBEB;
+}
+
+.menus__dishes__row {
+  display: flex;
+}
+
+.menus__dishes__row + .menus__dishes__row {
+  border-top: 1px solid #EBEBEB;
+}
+
+.menus__dishes__row > div {
+  font-size: .8em;
+  padding: 6px;
+}
+
+.menus__dishes__name {
+  flex: 2;
+  color: #444;
+}
+
+.menus__dishes__ingredients {
+  flex: 3;
+  color: #777;
+  font-style: italic;
+}
+
+.menus__dishes__price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}
+
+.menus__featured {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.menus__featured__pic {
+  flex: 2;
+}
+
+.menus__featured__pic img {
+  display: block;
+  border-radius: 10px;
+}
+
+.menus__featured__name {
+  flex: 3;
+  padding: 10px;
+  color: #444;
+}
+
+.menus__featured__price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}

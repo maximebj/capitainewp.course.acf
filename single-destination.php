@@ -13,7 +13,7 @@
   <h2>Ces agences proposent des voyages vers cette destination</h2>
   
   <?php
-    $agencies = get_posts( array(
+    $args = array(
       'post_type' => 'agence', // Le CPT agence
       'meta_query' => array(
         array(
@@ -22,20 +22,24 @@
           'compare' => 'LIKE'
         )
       )
-    ));
+    );
 
-    if( $agencies ): 
+    $agencies = new WP_Query( $args );
+    if( $agencies->have_posts() ): 
   ?>
     <ul class="agencies">
-      <?php foreach( $agencies as $agency ): ?>
+      <?php while( $agencies->have_posts() ): $agencies->the_post(); ?>
         <li class="agencies__logo">
-          <a href="<?php echo get_permalink( $agency->ID ); ?>">
-            <?php echo get_the_post_thumbnail( $agency->ID, 'large' ); ?>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail( 'large' ); ?>
           </a>
         </li>
-      <?php endforeach; ?>
+      <?php endwhile; ?>
     </ul>
-  <?php endif; ?>
+  <?php 
+    endif;
+    wp_reset_postdata(); 
+  ?>
       
 <?php 
   endwhile; endif;

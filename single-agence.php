@@ -5,24 +5,30 @@
 
   <h1 class="site__heading"><?php the_title(); ?></h1>
 
-  <div class="wp-content"><?php the_content(); ?></div>
+  <div class="agency">
+    <div class="agency__logo">
+      <?php the_post_thumbnail( 'large' ); ?>
+    </div>
+    <div class="agency__description">
+      <?php the_content(); ?>
+    </div>
+  </div>
 
   <?php 
-    $posts = get_field( 'related' );
+    $posts = get_field( 'destinations' );
 
     if( $posts ): 
   ?>
-    <h2>Vous aimerez aussi</h2>
-    <ul class="related">
+    <h2>Nos destinations</h2>
+    <ul class="destinations">
       <?php 
         foreach( $posts as $post ): // Le nom $post est IMPORTANT
           setup_postdata( $post ); // Initialiser les données (comme la boucle WP)
       ?>
-        <li class="related__post">
+        <li class="destinations__trip">
           <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail( 'gallery-thumb' ); ?>
             <h3><?php the_title(); ?></h3>
-            <p>Préparation : <?php the_field( 'duration' ); ?></p>
           </a>
         </li>
       <?php 

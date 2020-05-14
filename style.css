@@ -301,3 +301,81 @@ a {
   text-align: right;
   font-weight: bold;
 }
+
+
+/* Relationnel : recettes similaires */
+
+.related {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0 -20px;
+}
+
+.related__post {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.related__post a {
+  text-decoration: none;
+}
+
+.related__post h3 {
+  margin: .5em 0 1em;
+}
+
+.related__post + .related__post {
+  border-left: 1px solid #EBEBEB;
+}
+
+/* Relationnel : agences et destinations */
+
+.agency {
+  display: flex;
+}
+
+.agency__logo {
+  flex: 1;
+  margin-right: 60px;
+}
+
+.agency__description {
+  flex: 3;
+}
+
+.destinations {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0 -20px;
+}
+
+.destinations__trip {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.destinations__trip a {
+  text-decoration: none;
+}
+
+.destinations__trip h3 {
+  margin: .5em 0 1em;
+}
+
+.agencies {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.agencies__logo + .agencies__logo {
+  margin-left: 60px;
+}
+
+.agencies__logo img {
+  width: auto;
+  max-height: 40px;
+  margin-bottom: 1em;
+}

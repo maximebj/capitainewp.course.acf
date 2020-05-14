@@ -1,10 +1,10 @@
 <?php 
 
-// Clé d'API
+// Clé d'API (pour la Google Maps)
 define( 'CAPITAINE_GMAP_API_KEY', 'AIzaSyBAEgvP6uG-mq332hbWXjL1gifMIirvTDM' );
 
-
-// Ajouter automatiquement le titre du site dans l'en-tête du site
+// Configurations de base du thème
+add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
 // Menus
@@ -16,6 +16,7 @@ register_nav_menus( array(
 
 
 // Ajouter une taille d'image
+set_post_thumbnail_size( 600, 0, false );
 add_image_size( 'gallery-thumb', 1200, 800, true );
 
 
@@ -65,7 +66,7 @@ add_filter( 'acf/fields/google_map/api', 'capitaine_acf_google_map_api' );
 // Custom Post Types & Taxonomies
 function capitaine_register_post_types() {
   
-  // Type de publication
+  // Lieux (pour la Google Maps)
   $labels = array(
     'name' => 'Lieux',
     'menu_name' => 'Lieux'
@@ -82,6 +83,43 @@ function capitaine_register_post_types() {
   );
 
   register_post_type( 'places', $args );
+
+
+  // Agences (pour le champ Relationnel)
+  $labels = array(
+    'name' => 'Agences de voyage',
+    'menu_name' => 'Agences'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'menu_position' => 6,
+    'menu_icon' => 'dashicons-store',
+  );
+
+  register_post_type( 'agence', $args );
+
+  // Destinations (pour le champ Relationnel)
+  $labels = array(
+    'name' => 'Destinations',
+    'menu_name' => 'Destinations'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-palmtree',
+  );
+
+  register_post_type( 'destination', $args );
 
 }
 add_action( 'init', 'capitaine_register_post_types' );

@@ -11,7 +11,12 @@
 
   <?php wp_body_open(); ?>
 
-  <header class="site__header">
+  <?php if( get_field( 'banner', 'option' ) ): ?>
+    <div class="site__banner"><?php the_field( 'banner', 'option' ); ?></div>
+  <?php endif; ?>
+
+  <header class="site__header" style='background-color: <?php the_field( 'header_color', 'option' ) ?>'>
+    <div class="site__header__tel">Appelez-moi : <?php the_field( 'tel', 'option' ); ?></div>
     <a href="<?php echo home_url( '/' ); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo">
     </a>

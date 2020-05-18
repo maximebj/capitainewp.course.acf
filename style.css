@@ -39,6 +39,13 @@ a {
 
 /* Site header */
 
+.site__banner {
+  background: #eb4b89;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
 .site__header {
   text-align: center;
   background: #232634;
@@ -47,6 +54,13 @@ a {
 
 .site__header img {
   height: 120px;
+}
+
+.site__header__tel {
+  margin-right: 20px;
+  color: white;
+  text-align: right;
+  font-size: .8em;
 }
 
 .site__header__menu {

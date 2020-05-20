@@ -160,3 +160,18 @@ function capitaine_admin_style( $hook ) {
 
 }
 add_action( 'admin_enqueue_scripts', 'capitaine_admin_style' );
+
+
+// Ajouter des Widgets (pour le cours Assigner des champs aux taxonomies et utilisateurs)
+function capitaine_widgets_init() {
+  register_sidebar( array(
+    'name'          => __( 'Main Sidebar', 'textdomain' ),
+    'id'            => 'sidebar-1',
+    'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'capitaine_widgets_init' );

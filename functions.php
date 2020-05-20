@@ -146,3 +146,17 @@ if( function_exists( 'acf_add_options_page' ) ) {
 	) );
 	
 }
+
+
+// CSS dans l'interface d'administration
+function capitaine_admin_style( $hook ) {
+  
+  // var_dump( $hook );
+  // var_dump( get_current_screen() );
+
+  if( $hook == 'post.php' ) {
+    wp_enqueue_style( 'admin-styles', get_template_directory_uri() . '/css/admin.css' );
+  }
+
+}
+add_action( 'admin_enqueue_scripts', 'capitaine_admin_style' );

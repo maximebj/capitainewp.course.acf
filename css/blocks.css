@@ -1,0 +1,79 @@
+/* Bloc plugin */
+
+.plugin {
+  display: flex;
+  max-width: 600px;
+  margin: 2em 0;
+  border: 2px solid #EBEBEB;
+}
+
+.plugin__icon {
+  max-width: 200px;
+}
+
+.plugin__icon img {
+  display: block;
+}
+
+.plugin__content {
+  flex: 1;
+  padding: 20px;
+}
+
+.plugin__title {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.plugin__description {
+  font-size: .9em;
+}
+
+.plugin__link {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 0;
+}
+
+
+/* Bloc recette */
+
+.recipe {
+  margin: 2em auto;
+  max-width: 450px;
+  border: 2px solid #EBEBEB;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.recipe__content {
+  padding: 20px;
+}
+
+.recipe__title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.recipe em {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  margin: 1em 0;
+}
+
+
+/* fix styles éditeur */
+
+.editor-styles-wrapper .plugin p,
+.editor-styles-wrapper .recipe p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.editor-styles-wrapper .plugin p:last-child,
+.editor-styles-wrapper .recipe p:last-child {
+  margin-bottom: 0;
+}

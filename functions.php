@@ -148,6 +148,8 @@ if( function_exists( 'acf_add_options_page' ) ) {
 }
 
 
+
+
 // CSS dans l'interface d'administration
 function capitaine_admin_style( $hook ) {
   
@@ -160,6 +162,8 @@ function capitaine_admin_style( $hook ) {
 
 }
 add_action( 'admin_enqueue_scripts', 'capitaine_admin_style' );
+
+
 
 
 // Ajouter des Widgets (pour le cours Assigner des champs aux taxonomies et utilisateurs)
@@ -175,3 +179,38 @@ function capitaine_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'capitaine_widgets_init' );
+
+
+
+
+// Déclarer des blocs Gutenberg avec ACF
+function capitaine_register_acf_block_types() {
+
+  acf_register_block_type( array(
+    'name'              => 'plugin',
+    'title'             => 'Extension',
+    'description'       => "Présentation d'une extension WordPress",
+    'render_template'   => 'blocks/plugin.php',
+    'category'          => 'formatting', // common, formatting, layout, widgets, embed
+    'icon'              => 'admin-plugins', // https://developer.wordpress.org/resource/dashicons/
+    'keywords'          => array( 'plugin', 'extension', 'add-on' ),
+    'enqueue_assets'    => function() {
+      wp_enqueue_style( 'capitaine-blocks', get_template_directory_uri() . '/css/blocks.css' );
+    }
+  ) );
+  
+  acf_register_block_type( array(
+    'name'              => 'recipe',
+    'title'             => 'Recette',
+    'description'       => "Aperçu d'une recette",
+    'render_template'   => 'blocks/recipe.php',
+    'category'          => 'common',
+    'icon'              => 'carrot',
+    'keywords'          => array(),
+    'enqueue_assets'    => function() {
+      wp_enqueue_style( 'capitaine-blocks', get_template_directory_uri() . '/css/blocks.css' );
+    }
+  ) );
+}
+
+add_action( 'acf/init', 'capitaine_register_acf_block_types' );

@@ -1,0 +1,39 @@
+{
+    "key": "group_5ec24001e65b4",
+    "title": "Page d'options couleurs",
+    "fields": [
+        {
+            "key": "field_5ec2401a8c24b",
+            "label": "Couleur de l'en-tête",
+            "name": "header_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-couleurs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Une autre page d'options",
+    "modified": 1590391006
+}

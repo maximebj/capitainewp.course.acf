@@ -214,3 +214,13 @@ function capitaine_register_acf_block_types() {
 }
 
 add_action( 'acf/init', 'capitaine_register_acf_block_types' );
+
+
+
+
+// Export JSON des champs ACF
+function capitaine_acf_export_json( $path ) {
+  $path = get_stylesheet_directory() . '/acf-json';
+  return $path;
+}
+add_filter( 'acf/settings/save_json', 'capitaine_acf_export_json' );

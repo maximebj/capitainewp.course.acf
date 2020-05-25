@@ -1,0 +1,39 @@
+{
+    "key": "group_5ec54c9710d90",
+    "title": "Widgets",
+    "fields": [
+        {
+            "key": "field_5ec54ca8ba804",
+            "label": "Couleur",
+            "name": "color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "text"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Un groupe de champs assigné au widget Texte",
+    "modified": 1590391038
+}

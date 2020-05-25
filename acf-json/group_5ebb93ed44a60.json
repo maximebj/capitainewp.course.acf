@@ -1,0 +1,51 @@
+{
+    "key": "group_5ebb93ed44a60",
+    "title": "Relationnel + inversé",
+    "fields": [
+        {
+            "key": "field_5ebb940084017",
+            "label": "Destinations disponibles",
+            "name": "destinations",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "destination"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "agence"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Utilisation du champ relationnel dans le cas d'une agence de voyages et de destinations",
+    "modified": 1590391029
+}

@@ -121,6 +121,24 @@ function capitaine_register_post_types() {
 
   register_post_type( 'destination', $args );
 
+  // Annuaire (pour l'exemple ACF en front)
+  $labels = array(
+    'name' => 'Annuaire',
+    'menu_name' => 'Annuaire'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-id-alt',
+  );
+
+  register_post_type( 'annuaire', $args );
+
 }
 add_action( 'init', 'capitaine_register_post_types' );
 

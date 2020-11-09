@@ -30,12 +30,12 @@ function capitaine_assets() {
   wp_deregister_script( 'jquery' );
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1', true );
 
-  // Charger notre script
-  wp_enqueue_script( 'capitaine', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0', true );
-
   // Flexlider (pour le cours sur la galerie)
   wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/lib/flexslider/jquery.flexslider-min.js', array( 'jquery' ), '2.7.2', true );
   wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/lib/flexslider/flexslider.css', array(), '2.7.2' );
+
+  // Charger notre script
+  wp_enqueue_script( 'capitaine', get_template_directory_uri() . '/js/script.js', array( 'jquery', 'flexslider' ), '1.0', true );
 
   // Google Maps
   if( 

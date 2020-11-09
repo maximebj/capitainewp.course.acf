@@ -138,7 +138,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Mise en pratique du répéteur pour une page équipe",
-    "modified": 1590391032
+    "modified": 1593503225
 }

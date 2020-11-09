@@ -27,7 +27,7 @@
             "name": "related",
             "type": "relationship",
             "instructions": "",
-            "required": false,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -64,7 +64,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Utilisation du champ relationnel pour sélectionner des articles similaires",
-    "modified": 1590391027
+    "modified": 1593504867
 }

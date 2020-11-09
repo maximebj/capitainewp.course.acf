@@ -13,10 +13,10 @@
 
   <?php if( have_rows( 'team' ) ): ?>
     <div class="team">
-      <?php while ( have_rows( 'team' ) ): the_row(); ?>
+      <?php while( have_rows( 'team' ) ): the_row(); ?>
         <div class="team__member">
           <div class="team__member__pic">
-            <?php 
+            <?php   
               $image_id = get_sub_field( 'picture' );
               echo wp_get_attachment_image( $image_id, 'full' );
             ?>

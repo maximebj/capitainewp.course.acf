@@ -22,7 +22,6 @@
         if( $place ): 
           $lat = esc_attr( $place['lat'] );
           $lng = esc_attr( $place['lng'] );
-          $zoom = esc_attr( $place['zoom'] );
     ?>
       
       <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>">

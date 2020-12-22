@@ -3,6 +3,22 @@
     "title": "Bloc Gutenberg : Plugin",
     "fields": [
         {
+            "key": "field_5fb25b34a660a",
+            "label": "Contenu",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5ec78d8a32dc2",
             "label": "Titre",
             "name": "title",
@@ -81,6 +97,22 @@
             "placeholder": ""
         },
         {
+            "key": "field_5fb25b45a660b",
+            "label": "Personnalisation",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5ec78dd832dc6",
             "label": "Couleur du fond",
             "name": "color",
@@ -111,7 +143,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Champs pour le bloc Gutenberg du plugin",
-    "modified": 1590390917
+    "modified": 1608644561
 }

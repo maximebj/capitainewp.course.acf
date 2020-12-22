@@ -214,7 +214,7 @@ function capitaine_register_acf_block_types() {
     'keywords'          => array( 'plugin', 'extension', 'add-on' ),
     'enqueue_assets'    => function() {
       wp_enqueue_style( 'capitaine-blocks', get_template_directory_uri() . '/css/blocks.css' );
-    }
+    },
   ) );
   
   acf_register_block_type( array(

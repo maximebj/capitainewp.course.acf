@@ -37,7 +37,7 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         },
         {
@@ -71,7 +71,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1590481398
+    "modified": 1604999695
 }

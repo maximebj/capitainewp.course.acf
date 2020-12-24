@@ -139,6 +139,24 @@ function capitaine_register_post_types() {
 
   register_post_type( 'annuaire', $args );
 
+  // Jeux vidéos (pour l'exemple Hooks ACF)
+  $labels = array(
+    'name' => 'Jeux vidéo',
+    'menu_name' => 'Jeux vidéo'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-games',
+  );
+
+  register_post_type( 'games', $args );
+
 }
 add_action( 'init', 'capitaine_register_post_types' );
 
@@ -242,3 +260,57 @@ function capitaine_acf_export_json( $path ) {
   return $path;
 }
 add_filter( 'acf/settings/save_json', 'capitaine_acf_export_json' );
+
+
+
+// Hooks ACF
+
+// Cas 1 : remplir dynamiquement les valeurs possibles d'un champ select
+function capitaine_load_skills_choices( $field ) {
+
+  // On récupère la valeur du champ skills_list dans les options
+  $values = get_field( 'skills_list', 'options' );
+
+  // On crée un tableau à partir des données : une ligne = une entrée
+  $choices = explode( "\r\n", $values );
+
+  // On assigne les choix au champ
+  $field['choices'] = $choices;
+
+  // On retourne la donnée
+  return $field;
+}
+add_filter( 'acf/load_field/name=skills', 'capitaine_load_skills_choices' );
+
+// Cas 2 : modifier la WP Query du champ relationnel afin de filtrer les résultats
+function capitaine_filter_games_query( $args, $field, $post_id ) {
+
+  // On ajoute des arguments à la requête
+  $args['meta_query'] = array(
+    array(
+      'key'      => 'score',
+      'value'    => 16,
+      'compare' => '>=',
+    )
+  ); 
+
+  // On renvoit les arguments modifiés
+  return $args;
+}
+
+add_filter( 'acf/fields/relationship/query/name=best_games', 'capitaine_filter_games_query', 10, 3 );
+
+
+// Cas 3 : on ajoute la note après le nom d'un jeu dans le champ
+function add_score_to_game_name( $text, $post, $field, $post_id ) {
+  
+  // On récupère la note
+  $score = get_field( 'score', $post->ID );
+
+  // On l'ajoute à la suite du nom
+  $text = $text . " • " . $score . "<small>/20</small>";
+
+  // On renvoit la valeur
+  return $text;
+}
+add_filter( 'acf/fields/relationship/result/name=best_games',  'add_score_to_game_name', 10, 4 );

@@ -1,0 +1,45 @@
+{
+    "key": "group_5fe46a33399e4",
+    "title": "Jeux vidéos",
+    "fields": [
+        {
+            "key": "field_5fe46a5a3f158",
+            "label": "Note",
+            "name": "score",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "\/20",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "games"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Utilisé dans le cours sur les Hooks des champs ACF",
+    "modified": 1608805015
+}

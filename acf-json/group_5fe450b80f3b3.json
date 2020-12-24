@@ -1,0 +1,80 @@
+{
+    "key": "group_5fe450b80f3b3",
+    "title": "Hooks ACF",
+    "fields": [
+        {
+            "key": "field_5fe450bc02af9",
+            "label": "Compétences",
+            "name": "skills",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "Installer WordPress en HTTPS",
+                "Créer et publier des publications",
+                "Importer des médias et les optimiser ",
+                "Installer des thèmes et des extensions",
+                "Optimiser le temps de chargement du site",
+                "Optimiser le site pour les moteurs de recherche"
+            ],
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fe468a518fe6",
+            "label": "Meilleurs jeux",
+            "name": "best_games",
+            "type": "relationship",
+            "instructions": "Ce champ n'affiche que les jeux dont la note est supérieure ou égale à 16\/20.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "games"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/hooks.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Des hooks pour modifier les valeurs des champs ACF",
+    "modified": 1608805243
+}

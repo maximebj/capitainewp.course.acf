@@ -39,6 +39,25 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5fe45018e5212",
+            "label": "Compétences",
+            "name": "skills_list",
+            "type": "textarea",
+            "instructions": "Ce champ est utilisé dans le cadre du cours sur les Hooks ACF.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -56,7 +75,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Une page d'options",
-    "modified": 1590391013
+    "modified": 1608798300
 }

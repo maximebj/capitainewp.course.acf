@@ -6,6 +6,7 @@
             "key": "field_5fb25b34a660a",
             "label": "Contenu",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ec78d8a32dc2",
             "label": "Titre",
             "name": "title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,6 +44,7 @@
             "key": "field_5ec78d9332dc3",
             "label": "Description",
             "name": "description",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -60,6 +64,7 @@
             "key": "field_5ec78da132dc4",
             "label": "Icône",
             "name": "icon",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -84,6 +89,7 @@
             "key": "field_5ec78dbc32dc5",
             "label": "URL",
             "name": "url",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -100,6 +106,7 @@
             "key": "field_5fb25b45a660b",
             "label": "Personnalisation",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -110,12 +117,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ec78dd832dc6",
             "label": "Couleur du fond",
             "name": "color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -125,7 +134,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#63ABD4"
+            "default_value": "#63ABD4",
+            "enable_opacity": false,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -133,7 +144,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/plugin"
+                "value": "capitaine\/plugin"
             }
         ]
     ],
@@ -145,5 +156,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Champs pour le bloc Gutenberg du plugin",
-    "modified": 1608644561
+    "show_in_rest": 0,
+    "modified": 1732206927
 }

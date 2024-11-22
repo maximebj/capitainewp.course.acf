@@ -14,11 +14,11 @@
   
   <?php
     $args = array(
-      'post_type' => 'agence', // Le CPT agence
+      'post_type' => 'agence', # Le CPT agence
       'meta_query' => array(
         array(
-          'key' => 'destinations', // Nom du champ relationnel
-          'value' => '"' . get_the_ID() . '"', // recherche exacte de l'ID
+          'key' => 'destinations', # Nom du champ relationnel
+          'value' => '"' . get_the_ID() . '"', # recherche exacte de l'ID
           'compare' => 'LIKE'
         )
       )

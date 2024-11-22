@@ -22,8 +22,8 @@
     <h2>Nos destinations</h2>
     <ul class="destinations">
       <?php 
-        foreach( $posts as $post ): // Le nom $post est IMPORTANT
-          setup_postdata( $post ); // Initialiser les données (comme la boucle WP)
+        foreach( $posts as $post ): # Le nom $post est IMPORTANT
+          setup_postdata( $post ); # Initialiser les données (comme la boucle WP)
       ?>
         <li class="destinations__trip">
           <a href="<?php the_permalink(); ?>">
@@ -33,7 +33,7 @@
         </li>
       <?php 
         endforeach; 
-        wp_reset_postdata(); // IMPORTANT - réinitialise $post pour que le reste de la page fonctionne correctement
+        wp_reset_postdata(); # IMPORTANT - réinitialise $post pour que le reste de la page fonctionne correctement
       ?>
     </ul>
   <?php endif; ?>

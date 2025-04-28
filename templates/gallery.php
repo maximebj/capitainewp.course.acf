@@ -33,8 +33,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 
   <?php
   $images = get_field('slider');
+
   if ($images):
-    //var_dump($images); 
+    // var_dump($images); 
   ?>
     <div id="slider" class="flexslider">
       <ul class="slides">

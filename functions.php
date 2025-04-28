@@ -1,7 +1,7 @@
 <?php
 
 # Clé d'API (pour la Google Maps)
-define('CAPITAINE_GMAP_API_KEY', 'AIzaSyBAEgvP6uG-mq332hbWXjL1gifMIirvTDM');
+define('CAPITAINE_GMAP_API_KEY', 'AIzaSyBp_sQ0r0ozy4v-SKxbbos0jc2TIo3AgWQ');
 
 # Initialisation du thème
 function capitaine_setup_theme()

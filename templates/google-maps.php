@@ -13,6 +13,7 @@
 
   <?php 
     $place = get_field( 'place' );
+
     if( $place ): 
       $lat = esc_attr( $place['lat'] );
       $lng = esc_attr( $place['lng'] );

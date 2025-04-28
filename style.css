@@ -169,6 +169,17 @@ a {
   cursor: pointer;
 }
 
+/* Slider */
+
+.slides a {
+  text-decoration: none;
+}
+
+.slides a img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
 /* Google Maps */
 .acf-map {
   width: 100%;

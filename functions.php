@@ -3,21 +3,15 @@
 # Clé d'API (pour la Google Maps)
 define('CAPITAINE_GMAP_API_KEY', 'AIzaSyBAEgvP6uG-mq332hbWXjL1gifMIirvTDM');
 
-# Configurations de base du thème
-add_theme_support('post-thumbnails');
-add_theme_support('title-tag');
-
-# Menus
-register_nav_menus(array(
-  'main' => __('Main menu', 'capitaine'),
-));
-
-
-
-
-# Ajouter une taille d'image
-set_post_thumbnail_size(600, 0, false);
-add_image_size('gallery-thumb', 1200, 800, true);
+# Initialisation du thème
+function capitaine_setup_theme()
+{
+  # Menus
+  register_nav_menus(array(
+    'main' => __('Main menu', 'capitaine'),
+  ));
+}
+add_action('init', 'capitaine_setup_theme');
 
 
 
@@ -162,27 +156,29 @@ function capitaine_register_post_types()
 add_action('init', 'capitaine_register_post_types');
 
 
-
-
 # Pages d'options
-if (function_exists('acf_add_options_page')) {
+function capitaine_register_acf_options_pages()
+{
 
-  acf_add_options_page(array(
-    'page_title'   => 'Options du thème',
-    'menu_title'  => 'Options',
-    'menu_slug'   => 'theme-general-settings',
-    'capability'  => 'edit_posts',
-    'redirect'    => false,
-    'position'    => 2
-  ));
+  if (function_exists('acf_add_options_page')) {
 
-  acf_add_options_sub_page(array(
-    'page_title'   => 'Couleurs du thème',
-    'menu_title'  => 'Couleurs',
-    'parent_slug'  => 'theme-general-settings',
-  ));
+    acf_add_options_page(array(
+      'page_title'   => 'Options du thème',
+      'menu_title'  => 'Options',
+      'menu_slug'   => 'theme-general-settings',
+      'capability'  => 'edit_posts',
+      'redirect'    => false,
+      'position'    => 2
+    ));
+
+    acf_add_options_sub_page(array(
+      'page_title'   => 'Couleurs du thème',
+      'menu_title'  => 'Couleurs',
+      'parent_slug'  => 'theme-general-settings',
+    ));
+  }
 }
-
+add_action('init', 'capitaine_register_acf_options_pages');
 
 
 

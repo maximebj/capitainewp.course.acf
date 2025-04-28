@@ -8,18 +8,18 @@ Requires at least: WordPress 5.0
 Version: 1.0
 */
 
-
 * {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
 }
 
 body {
   font-size: 18px;
-  font-family: 'Sarabun', sans-serif;
+  font-family: "Sarabun", sans-serif;
 }
 
 img {
@@ -28,14 +28,13 @@ img {
 }
 
 p {
-  color: #6B747A;
+  color: #6b747a;
   line-height: 1.6;
 }
 
 a {
-  color: #48ADD8;
+  color: #48add8;
 }
-
 
 /* Site header */
 
@@ -60,7 +59,7 @@ a {
   margin-right: 20px;
   color: white;
   text-align: right;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .site__header__menu {
@@ -78,17 +77,16 @@ a {
 }
 
 .site__header__menu li + li:before {
-  content: ' • ';
+  content: " • ";
   color: white;
   margin: 10px;
-} 
+}
 
 .site__header__menu a {
   color: white;
   text-decoration: none;
   line-height: 2em;
 }
-
 
 /* Site title */
 
@@ -101,11 +99,11 @@ a {
 }
 
 .site__heading:after {
-  content: '';
+  content: "";
   display: block;
   width: 50px;
   height: 0;
-  border-bottom: 2px solid #EBEBEB;
+  border-bottom: 2px solid #ebebeb;
   margin: 30px auto;
 }
 
@@ -130,12 +128,11 @@ a {
   text-align: center;
   background: #232634;
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
   padding: 1em 0;
 }
 
-
-/* ACF Gallery */ 
+/* ACF Gallery */
 
 .acf-gallery {
   list-style-type: none;
@@ -150,6 +147,11 @@ a {
   padding: 10px;
 }
 
+.acf-gallery img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
 /* Lightbox */
 
 .lightbox {
@@ -160,13 +162,12 @@ a {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
-
 
 /* Google Maps */
 .acf-map {
@@ -179,7 +180,6 @@ a {
 .acf-map img {
   max-width: inherit !important; /* Corrige un souci de conflit avec le thème */
 }
-
 
 /* Répéteur */
 
@@ -205,7 +205,7 @@ a {
 .team__member__data {
   flex: 4;
   padding: 20px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .team__member__data p {
@@ -227,13 +227,12 @@ a {
   color: #777;
 }
 
-
 /* Flexible */
 
 .menus {
   margin: 0 auto;
   max-width: 680px;
-  border: 2px solid #EBEBEB;
+  border: 2px solid #ebebeb;
   border-radius: 10px;
   padding: 20px 50px;
 }
@@ -249,14 +248,14 @@ a {
 
 .menus__section p {
   margin-top: 0.5em;
-  font-size: .9em;
+  font-size: 0.9em;
   font-style: italic;
   color: #999;
 }
 
 .menus__dishes {
   margin: 2em 0;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
 }
 
 .menus__dishes__row {
@@ -264,11 +263,11 @@ a {
 }
 
 .menus__dishes__row + .menus__dishes__row {
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
 }
 
 .menus__dishes__row > div {
-  font-size: .8em;
+  font-size: 0.8em;
   padding: 6px;
 }
 
@@ -316,7 +315,6 @@ a {
   font-weight: bold;
 }
 
-
 /* Relationnel : recettes similaires */
 
 .related {
@@ -336,11 +334,11 @@ a {
 }
 
 .related__post h3 {
-  margin: .5em 0 1em;
+  margin: 0.5em 0 1em;
 }
 
 .related__post + .related__post {
-  border-left: 1px solid #EBEBEB;
+  border-left: 1px solid #ebebeb;
 }
 
 /* Relationnel : agences et destinations */
@@ -375,7 +373,7 @@ a {
 }
 
 .destinations__trip h3 {
-  margin: .5em 0 1em;
+  margin: 0.5em 0 1em;
 }
 
 .agencies {

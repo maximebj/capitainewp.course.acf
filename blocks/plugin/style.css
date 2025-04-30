@@ -1,12 +1,11 @@
 .plugin {
   display: flex;
-  max-width: 600px;
   margin: 2em 0;
   border: 2px solid #ebebeb;
 }
 
 .plugin__icon {
-  max-width: 200px;
+  max-width: 260px;
 }
 
 .plugin__icon img {

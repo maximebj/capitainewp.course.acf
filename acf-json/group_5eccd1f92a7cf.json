@@ -6,6 +6,7 @@
             "key": "field_5eccd204d8639",
             "label": "Entreprise",
             "name": "entreprise",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5eccd209d863a",
             "label": "Adresse",
             "name": "adress",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -44,6 +46,7 @@
             "key": "field_5eccd216d863b",
             "label": "Horaires d'ouverture",
             "name": "hours",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -63,6 +66,7 @@
             "key": "field_5eccd2b9d863c",
             "label": "URL du site",
             "name": "url",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -93,5 +97,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608644568
+    "show_in_rest": false,
+    "modified": 1745919082
 }

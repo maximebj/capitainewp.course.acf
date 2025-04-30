@@ -3,9 +3,10 @@
     "title": "Mise en page des groupes de champs",
     "fields": [
         {
-            "key": "field_5ec2a877206bf",
+            "key": "field_6810d209b340a",
             "label": "Produits",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,29 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ec4ed4c7551c",
-            "label": "Information aux rédacteurs",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Le produit doit porter un nom court et révélateur. \r\nAu niveau des prix, évitez les prix ronds.\r\nconcernant le choix des couleurs, référez-vous à la charte",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ec29ec05bd26",
             "label": "Titre",
             "name": "title",
+            "aria-label": "",
             "type": "text",
             "instructions": "Moins de 50 caractères",
             "required": 0,
@@ -49,15 +35,17 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5ec29f385bd28",
             "label": "Prix",
             "name": "price",
+            "aria-label": "",
             "type": "number",
             "instructions": "Montant TTC",
             "required": 0,
@@ -68,17 +56,19 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "€",
             "min": "",
             "max": "",
-            "step": ""
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "€"
         },
         {
             "key": "field_5ec29f515bd29",
             "label": "En stock ?",
             "name": "stock",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "Vérifiez le stock !",
             "required": 0,
@@ -90,14 +80,16 @@
             },
             "message": "",
             "default_value": 1,
-            "ui": 1,
+            "allow_in_bindings": 1,
             "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_off_text": "",
+            "ui": 1
         },
         {
             "key": "field_5ec29f145bd27",
             "label": "Couleur",
             "name": "color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "Respectez la charte !",
             "required": 0,
@@ -107,59 +99,17 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_5ec29fa084e87",
             "label": "Description",
             "name": "description",
+            "aria-label": "",
             "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 5,
-            "new_lines": ""
-        },
-        {
-            "key": "field_5ec29fb684e88",
-            "label": "Livraison",
-            "name": "delivery",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Lundi": "Lundi",
-                "Mardi": "Mardi",
-                "Mercredi": "Mercredi",
-                "Jeudi": "Jeudi",
-                "Vendredi": "Vendredi"
-            },
-            "allow_custom": 0,
-            "default_value": false,
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
-        },
-        {
-            "key": "field_5ec4ca97223c8",
-            "label": "Gestion des taxes",
-            "name": "has_taxes",
-            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -168,74 +118,18 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Activer la TVA",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5ec4cac4223c9",
-            "label": "Taux de TVA Standard",
-            "name": "standad_vat_rate",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5ec4ca97223c8",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
             "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": 5,
             "placeholder": "",
-            "prepend": "",
-            "append": "%",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5ec4caec223ca",
-            "label": "Taux de TVA Réduit",
-            "name": "reduced_vat_rate",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5ec4ca97223c8",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "%",
-            "min": "",
-            "max": "",
-            "step": ""
+            "new_lines": ""
         },
         {
             "key": "field_5ec4de3ec05c1",
             "label": "Notes",
             "name": "notes",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "Ces données ne seront pas affichées sur le site",
             "required": 0,
@@ -246,15 +140,17 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "rows": 5,
+            "placeholder": "",
             "new_lines": ""
         },
         {
-            "key": "field_5ec2a892206c0",
-            "label": "Sous Produits",
+            "key": "field_6810d21fb340b",
+            "label": "Sous produits",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -265,12 +161,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ec2ccca206c2",
             "label": "Sous Produits",
             "name": "subproducts",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -284,12 +182,13 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Ajouter un élément",
             "sub_fields": [
                 {
                     "key": "field_5ec4cf3185e30",
                     "label": "Clone",
                     "name": "clone",
+                    "aria-label": "",
                     "type": "clone",
                     "instructions": "",
                     "required": 0,
@@ -308,14 +207,17 @@
                     "display": "seamless",
                     "layout": "block",
                     "prefix_label": 0,
-                    "prefix_name": 0
+                    "prefix_name": 0,
+                    "parent_repeater": "field_5ec2ccca206c2"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
-            "key": "field_5ec2ccba206c1",
+            "key": "field_6810d231b340c",
             "label": "Offres du moment",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -326,12 +228,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ec2ccdd206c3",
             "label": "Offres",
             "name": "offres",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -345,8 +249,35 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
-            "sub_fields": []
+            "button_label": "Ajouter un élément",
+            "sub_fields": [],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_6810998b8dabc",
+            "label": "Informations du produit",
+            "name": "informations_du_produit",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5ec29ec05bd26",
+                "field_5ec29f385bd28",
+                "field_5ec29f515bd29",
+                "field_5ec29f145bd27",
+                "field_5ec29fa084e87"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -359,12 +290,23 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "seamless",
-    "label_placement": "left",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "format",
+        "page_attributes",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "Améliorer la mise en page des groupes de champs",
-    "modified": 1593508941
+    "show_in_rest": 1,
+    "modified": 1745934172
 }

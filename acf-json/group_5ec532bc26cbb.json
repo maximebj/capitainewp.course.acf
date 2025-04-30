@@ -4,8 +4,9 @@
     "fields": [
         {
             "key": "field_5ec5330437334",
-            "label": "Twitter",
+            "label": "X",
             "name": "twitter",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "placeholder": ""
         },
         {
             "key": "field_5ec5331037335",
             "label": "Facebook",
             "name": "facebook",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -41,11 +44,6 @@
                 "param": "user_form",
                 "operator": "==",
                 "value": "edit"
-            },
-            {
-                "param": "user_role",
-                "operator": "==",
-                "value": "author"
             }
         ]
     ],
@@ -55,7 +53,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Un groupe de champ assigné aux utilisateurs",
-    "modified": 1590391036
+    "show_in_rest": 0,
+    "modified": 1745940540
 }

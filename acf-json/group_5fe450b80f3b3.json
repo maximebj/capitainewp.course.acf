@@ -6,6 +6,7 @@
             "key": "field_5fe450bc02af9",
             "label": "Compétences",
             "name": "skills",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -32,11 +33,12 @@
             "placeholder": ""
         },
         {
-            "key": "field_5fe468a518fe6",
+            "key": "field_6811d3328bddf",
             "label": "Meilleurs jeux",
             "name": "best_games",
+            "aria-label": "",
             "type": "relationship",
-            "instructions": "Ce champ n'affiche que les jeux dont la note est supérieure ou égale à 16\/20.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -47,16 +49,20 @@
             "post_type": [
                 "games"
             ],
+            "post_status": "",
             "taxonomy": "",
             "filters": [
                 "search"
             ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
             "elements": [
                 "featured_image"
             ],
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "bidirectional": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -76,5 +82,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Des hooks pour modifier les valeurs des champs ACF",
-    "modified": 1608805243
+    "show_in_rest": 0,
+    "modified": 1745998862
 }

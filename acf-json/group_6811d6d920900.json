@@ -1,11 +1,11 @@
 {
-    "key": "group_5ebb93ed44a60",
-    "title": "Relationnel + inversé",
+    "key": "group_6811d6d920900",
+    "title": "Bidirectionnel",
     "fields": [
         {
-            "key": "field_5ebb940084017",
-            "label": "Destinations disponibles",
-            "name": "destinations",
+            "key": "field_6811d6d9a9752",
+            "label": "Agences liée",
+            "name": "related_agencies",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -17,7 +17,7 @@
                 "id": ""
             },
             "post_type": [
-                "destination"
+                "agence"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -28,12 +28,10 @@
             "min": "",
             "max": "",
             "allow_in_bindings": 1,
-            "elements": [
-                "featured_image"
-            ],
+            "elements": "",
             "bidirectional": 1,
             "bidirectional_target": [
-                "field_6811d6d9a9752"
+                "field_5ebb940084017"
             ]
         }
     ],
@@ -42,18 +40,18 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "agence"
+                "value": "destination"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Utilisation du champ relationnel dans le cas d'une agence de voyages et de destinations",
+    "description": "",
     "show_in_rest": 0,
-    "modified": 1745999667
+    "modified": 1745999804
 }

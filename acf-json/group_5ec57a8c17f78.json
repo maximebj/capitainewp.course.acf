@@ -6,6 +6,7 @@
             "key": "field_5ec57a941067a",
             "label": "Politique de confidentialité",
             "name": "gdrp",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -39,5 +40,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608644565
+    "show_in_rest": false,
+    "modified": 1745919081
 }

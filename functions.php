@@ -10,6 +10,9 @@ function capitaine_setup_theme()
   register_nav_menus(array(
     'main' => __('Main menu', 'capitaine'),
   ));
+
+  # Activer les images mises en avant
+  add_theme_support('post-thumbnails');
 }
 add_action('init', 'capitaine_setup_theme');
 

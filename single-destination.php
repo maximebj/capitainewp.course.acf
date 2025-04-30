@@ -9,8 +9,31 @@
 
   <div class="wp-content"><?php the_content(); ?></div>
 
+  <?php
+    $posts = get_field( 'related_agencies' );
 
-  <h2>Ces agences proposent des voyages vers cette destination</h2>
+    if( $posts ): 
+  ?>
+    <h2>Ces agences proposent des voyages vers cette destination</h2>
+    <ul class="agencies">
+      <?php 
+        foreach( $posts as $post ): 
+          setup_postdata( $post );
+      ?>
+        <li class="agencies__logo">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail( 'large' ); ?>
+          </a>
+        </li>
+      <?php 
+        endforeach; 
+        wp_reset_postdata(); # IMPORTANT
+      ?>
+    </ul>
+  <?php endif; ?>
+
+  <?php /* Ancienne méthode 
+  
   
   <?php
     $args = array(
@@ -40,6 +63,7 @@
     endif;
     wp_reset_postdata(); 
   ?>
+  */ ?>
       
 <?php 
   endwhile; endif;

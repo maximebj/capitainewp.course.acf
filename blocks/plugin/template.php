@@ -1,4 +1,4 @@
-<div class="plugin">
+<div <?php echo get_block_wrapper_attributes(['class' => 'plugin']) ?>>
   <div class="plugin__content">
     <p class="plugin__title">
       <?php the_field( 'title' ); ?>

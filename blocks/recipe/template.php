@@ -1,9 +1,10 @@
 <?php 
   $recipe = get_field( 'recipe' );
+  $attributes = get_block_wrapper_attributes(['class' => 'recipe']);
 
   if( $recipe ): 
 ?> 
-  <div class="recipe">
+  <div <?php echo $attributes ?>>
     <div class="recipe__image">
       <?php echo get_the_post_thumbnail( $recipe, 'large' ); ?>
     </div>
@@ -14,7 +15,7 @@
     </div>
   </div>
 <?php elseif( is_admin() ): ?>
-  <div class="recipe">
+  <div <?php echo $attributes ?>>
     <em>Choisissez une recette dans la colonne de droite.</em>
   </div>
 <?php endif; ?>

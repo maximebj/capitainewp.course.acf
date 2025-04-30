@@ -1,57 +1,51 @@
 {
-    "key": "group_6811d6d920900",
-    "title": "Bidirectionnel",
-    "fields": [
-        {
-            "key": "field_6811d6d9a9752",
-            "label": "Agences liée",
-            "name": "related_agencies",
-            "aria-label": "",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "agence"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "return_format": "id",
-            "min": "",
-            "max": "",
-            "allow_in_bindings": 1,
-            "elements": "",
-            "bidirectional": 1,
-            "bidirectional_target": [
-                "field_5ebb940084017"
-            ]
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "destination"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "modified": 1745999804
+  "key": "group_6811d6d920900",
+  "title": "Bidirectionnel",
+  "fields": [
+    {
+      "key": "field_6811d6d9a9752",
+      "label": "Agences",
+      "name": "agencies",
+      "aria-label": "",
+      "type": "relationship",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["agence"],
+      "post_status": "publish",
+      "taxonomy": "",
+      "filters": ["search"],
+      "return_format": "id",
+      "min": "",
+      "max": "",
+      "allow_in_bindings": 1,
+      "elements": "",
+      "bidirectional": 1,
+      "bidirectional_target": ["field_5ebb940084017"]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "destination"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 17459998014
 }

@@ -224,6 +224,7 @@ add_action('widgets_init', 'capitaine_widgets_init');
 # Déclarer des blocs Gutenberg avec ACF
 function capitaine_register_acf_block_types()
 {
+  register_block_type(__DIR__ . '/blocks/example');
   register_block_type(__DIR__ . '/blocks/plugin');
   register_block_type(__DIR__ . '/blocks/recipe');
   register_block_type(__DIR__ . '/blocks/link-container');
